@@ -118,7 +118,30 @@
 
             Console.WriteLine("-----FINE QUARTO SNACK-----");
 
-           
+            /*
+            Snack 5
+            Il software chiede all’utente di inserire un numero. 
+            Se il numero inserito è pari, stampa il numero,
+            se è dispari, stampa il numero successivo.
+            */
+
+            Console.WriteLine("-----INIZIO QUINTO SNACK-----");
+
+            // chiedo il numero e lo converto in intero
+            Console.WriteLine("Odio i numeri dispari, inserisci un numero");
+            //al momento dell'inserimento lo converto in intero
+            int num = Convert.ToInt32(Console.ReadLine());
+
+            if (num % 2 == 0)
+            {
+                Console.WriteLine($"Ben fatto {num} mi piace come numero");
+            }
+            else
+            {
+                Console.WriteLine($"{num + 1} mi piace di più");
+            }
+
+            Console.WriteLine("-----FINE QUINTO SNACK-----");
         }
                
     }
