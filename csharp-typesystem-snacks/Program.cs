@@ -142,7 +142,49 @@
             }
 
             Console.WriteLine("-----FINE QUINTO SNACK-----");
+
+            /*
+            Snack 6
+            In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. 
+            Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
+            */
+
+            Console.WriteLine("-----INIZIO SESTO SNACK-----");
+
+            // inizializzo e definisco l'array degli invitati
+            string[] invited = new string[5] { "alice", "bob", "charlie", "diana", "eve" };
+
+            //chiedo all'utente il proprio nome
+            Console.WriteLine("Buonasera, prego il suo nome?");
+            //recupero il suo nome
+            string name = Console.ReadLine().ToLower();
+
+            // Setto di base l'invito a false
+            bool isInvited = false;
+
+            // Confronto il nome inserito dall'utente con quelli presenti nell'array degli invitati
+            foreach (string invitedName in invited)
+            {
+                if (invitedName == name)
+                {
+                    isInvited = true;
+                    break; // Possiamo uscire dal ciclo una volta trovato il nome corrispondente
+                }
+            }
+
+            // Verifico se l'utente è stato invitato o meno
+            if (isInvited)
+            {
+                Console.WriteLine("Sei stato invitato alla festa del Grande Gatsby!");
+                Console.WriteLine("Oppure sei un omonimo, entra prima che cambi idea");
+            }
+            else
+            {
+                Console.WriteLine("Mi dispiace, non sei stato invitato alla festa del Grande Gatsby.");
+            }
+
+            Console.WriteLine("-----FINE SESTO SNACK-----");
         }
-               
+
     }
 }
