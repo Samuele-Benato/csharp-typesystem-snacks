@@ -290,6 +290,42 @@ namespace csharp_typesystem_snacks
             }
 
             Console.WriteLine("-----FINE NONO SNACK-----");
+
+            /*
+           Snack 10
+           Fai inserire un numero, che chiameremo N, all’utente.
+           Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
+           Ogni volta che ne crei uno, stampalo a schermo.
+           */
+
+            Console.WriteLine("-----INIZIO DECIMO SNACK-----");
+
+            Console.WriteLine("Inserisci un numero di array:");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            Random random = new Random();
+
+            for (int i = 0; i < N; i++)
+            {
+                int[] array = new int[10];
+
+                // Riempie l'array con numeri casuali compresi tra 1 e 100
+                for (int j = 0; j < array.Length; j++)
+                {
+                    array[j] = random.Next(1, 101);
+                }
+
+                // Stampa l'array
+                Console.WriteLine($"Array {i + 1}:");
+                foreach (int num4 in array)
+                {
+                    Console.Write(num4 + " ");
+                }
+                Console.WriteLine(); // Stampa una nuova riga per formattazione
+            }
+
+            Console.WriteLine("-----FINE DECIMO SNACK-----");
+
         }
 
     }
