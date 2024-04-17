@@ -92,7 +92,7 @@ namespace csharp_typesystem_snacks
                 sum += input;
             }
 
-            Console.WriteLine($"La somma dei numeri inseriti è: {sum}");
+            Console.WriteLine($"La sum3 dei numeri inseriti è: {sum}");
 
             Console.WriteLine("-----FINE TERZO SNACK-----");
 
@@ -116,7 +116,7 @@ namespace csharp_typesystem_snacks
             double average = sum2 / 9;
             double roundedAverage = Math.Round(average, 1);
 
-            Console.WriteLine($"La somma è: {sum2} e la media è {roundedAverage}");
+            Console.WriteLine($"La sum3 è: {sum2} e la media è {roundedAverage}");
 
             Console.WriteLine("-----FINE QUARTO SNACK-----");
 
@@ -246,9 +246,50 @@ namespace csharp_typesystem_snacks
                 }
             }
 
-            Console.WriteLine($"La somma degli elementi in posizione dispari è: {addEvenNumbers}");
+            Console.WriteLine($"La sum3 degli elementi in posizione dispari è: {addEvenNumbers}");
 
             Console.WriteLine("-----FINE OTTAVO SNACK-----");
+
+            /*
+            Snack 9
+            Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
+            Continua a chiedere i numeri all’utente e a inserirli nell’array, 
+            fino a quando la somma degli elementi è minore di 50.
+            */
+
+            Console.WriteLine("-----INIZIO NONO SNACK-----");
+
+            int[] numeri = new int[10]; // Array vuoto massimo 10 elementi
+
+            int sum3 = 0;
+            int index = 0;
+
+            while (sum3 < 50 && index < 10)
+            {
+                Console.WriteLine("Inserisci un numero:");
+                int num3 = Convert.ToInt32(Console.ReadLine());
+
+                if(num3 >= 50)
+                {
+                    Console.WriteLine("gioco finito subito :(");
+                }
+
+                numeri[index] = num3; // Inserisci il numero nell'array
+                sum3 += num3; // Aggiorna la somma degli elementi
+
+                index++; // Passa all'elemento successivo nell'array
+            }
+
+            Console.WriteLine("La somma degli elementi dell'array è: " + sum3);
+            Console.WriteLine("Gli elementi dell'array sono:");
+
+            // Stampa gli elementi dell'array 
+            for (int i = 0; i < index; i++)
+            {
+                Console.WriteLine(numeri[i]);
+            }
+
+            Console.WriteLine("-----FINE NONO SNACK-----");
         }
 
     }
