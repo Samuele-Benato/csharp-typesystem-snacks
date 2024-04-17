@@ -1,4 +1,6 @@
-﻿namespace csharp_typesystem_snacks
+﻿using System;
+
+namespace csharp_typesystem_snacks
 {
     internal class Program
     {
@@ -184,6 +186,45 @@
             }
 
             Console.WriteLine("-----FINE SESTO SNACK-----");
+
+            /*
+            Snack 7
+            Crea un array vuoto.
+            Chiedi per 6 volte all’utente di inserire un numero,
+            se è dispari inseriscilo nell’array.            
+            */
+
+            Console.WriteLine("-----INIZIO SETTIMO SNACK-----");
+
+            int[] numbers = new int[6];
+
+            for (int i = 0; i <= 6; i++)
+            {
+                // chiedo il numero e lo converto in intero
+                Console.WriteLine("Scrivi un numero (x6)");
+                //al momento dell'inserimento lo converto in intero
+                int input2 = Convert.ToInt32(Console.ReadLine());
+
+                if (input2 % 2 == 0)
+                {
+                    Console.WriteLine($"Nah {input2} lo scarto");
+                }
+                if(input2 % 2 != 0)
+                {
+                    Console.WriteLine($"Bello {input2} lo lo tengo");
+                    numbers[i] = input2;
+                    i++;
+                }
+            }
+
+            // Stampiamo i numeri inseriti nell'array
+            Console.WriteLine("Tra i numeri che mi hai dato mi piacevano:");
+            foreach (int input2 in numbers)
+            {
+                Console.WriteLine(input2);
+            }
+
+            Console.WriteLine("-----FINE SETTIMO SNACK-----");
         }
 
     }
