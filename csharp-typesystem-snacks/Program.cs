@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+
             /*
             Snack 1
             L’utente inserisce due numeri in successione.
@@ -91,6 +92,33 @@
 
             Console.WriteLine($"La somma dei numeri inseriti è: {sum}");
 
+            Console.WriteLine("-----FINE TERZO SNACK-----");
+
+            /*
+            Snack 4
+            Calcola la somma e la media dei numeri da 2 a 10.
+            */
+
+            Console.WriteLine("-----INIZIO QUARTO SNACK-----");
+
+            // inizializzo la somma a 0
+            int sum2 = 0;
+
+            // per 10 volte chiedo il numero 
+            for (int i = 2; i < 10; i++)
+            {
+                sum2 += i;
+            }
+
+            // Calcolo della media
+            double average = sum2 / 9;
+            double roundedAverage = Math.Round(average, 1);
+
+            Console.WriteLine($"La somma è: {sum2} e la media è {roundedAverage}");
+
+            Console.WriteLine("-----FINE QUARTO SNACK-----");
+
+           
         }
                
     }
