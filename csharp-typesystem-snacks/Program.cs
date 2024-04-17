@@ -198,7 +198,7 @@ namespace csharp_typesystem_snacks
 
             int[] numbers = new int[6];
 
-            for (int i = 0; i <= 6; i++)
+            for (int i = 0; i < 6; i++)
             {
                 // chiedo il numero e lo converto in intero
                 Console.WriteLine("Scrivi un numero (x6)");
@@ -225,6 +225,30 @@ namespace csharp_typesystem_snacks
             }
 
             Console.WriteLine("-----FINE SETTIMO SNACK-----");
+
+
+            /*
+            Snack 8
+            Crea un array di numeri interi e fai la somma di tutti gli elementi
+            che sono in posizione dispari.           
+            */
+
+            Console.WriteLine("-----INIZIO OTTAVO SNACK-----");
+
+            int[] numbers2 = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int addEvenNumbers = 0;
+
+            for (int i = 0; i < numbers2.Length; i++)
+            {
+                if (i % 2 != 0) // Controllo se l'indice è dispari
+                {
+                    addEvenNumbers += numbers2[i];
+                }
+            }
+
+            Console.WriteLine($"La somma degli elementi in posizione dispari è: {addEvenNumbers}");
+
+            Console.WriteLine("-----FINE OTTAVO SNACK-----");
         }
 
     }
